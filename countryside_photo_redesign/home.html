@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .nav2 {
+            display: inline-block;
+            width: 800px;
+            margin: 0 auto;
+            margin-left: 200px;
+            text-align: center;
+        }
+
+
+        p#nav_section_012, p#nav_section_022, p#nav_section_032, p#nav_section_042, p#nav_section_052 {
+            display: inline;
+            font-size: 18px;
+            font-family: Helvetica, sans-serif;
+            font-weight: bolder;
+            text-align: center;
+            color: white;
+            padding: 0 30px;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: goldenrod;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: pink;
+        }
+
+        p {
+            padding-top: 25px;
+            padding-left: 10px;
+            font-family: sans-serif;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+
+        .cb-slideshow,
+        .cb-slideshow:after {
+            position: absolute;
+            list-style-type: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .cb-slideshow:after {
+        content: '';
+       /*background: transparent url(images/pattern.png) repeat top left;*/
+      list-style-type: none;
+        }
+
+        .cb-slideshow li span {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: transparent;
+            background-size: cover;
+            background-position: 50% 50%;
+            /*background-repeat: none;*/
+            opacity: 0;
+            z-index: 0;
+            animation: imageAnimation 38s linear infinite 0s;
+
+        }
+
+
+        .cb-slideshow li div {
+            z-index: 0;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            color: #fff;
+            animation: titleAnimation 38s linear infinite 0s;
+        }
+
+        .cb-slideshow li div h3 {
+            font-family: Helveticasans-serif;
+            font-size: 100px;
+            list-style-type: none;
+            padding: 0;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        .cb-slideshow li:nth-child(1) span {
+            background-image: url(30.jpg);
+        }
+        .cb-slideshow li:nth-child(1) span {
+            background-image: url(30.jpg);
+            animation-delay: 2s;
+        }
+
+        .cb-slideshow li:nth-child(2) span {
+            background-image: url(29.jpg);
+            animation-delay: 6s;
+        }
+
+        .cb-slideshow li:nth-child(3) span {
+            background-image: url(20.jpg);
+            animation-delay: 12s;
+        }
+
+        .cb-slideshow li:nth-child(4) span {
+            background-image: url(21.jpg);
+            animation-delay: 18s;
+        }
+
+        .cb-slideshow li:nth-child(5) span {
+            background-image: url(27.jpg);
+            animation-delay: 24s;
+        }
+
+        .cb-slideshow li:nth-child(6) span {
+              background-image: url(26.jpg);
+              animation-delay: 30s;
+          }
+
+        .cb-slideshow li:nth-child(7) span {
+            background-image: url(28.jpg);
+            animation-delay: 34s;
+        }
+
+        .cb-slideshow li:nth-child(8) span {
+            background-image: url(30copy.jpg);
+            animation-delay: 38s;
+        }
+
+
+        .cb-slideshow li:nth-child(1) div {
+            animation-delay: 0s;
+        }
+        .cb-slideshow li:nth-child(1) div {
+            animation-delay: 2s;
+        }
+        .cb-slideshow li:nth-child(2) div {
+            animation-delay: 6s;
+        }
+
+        .cb-slideshow li:nth-child(3) div {
+            animation-delay: 12s;
+        }
+
+        .cb-slideshow li:nth-child(4) div {
+            animation-delay: 18s;
+        }
+
+        .cb-slideshow li:nth-child(5) div {
+            animation-delay: 24s;
+        }
+
+        .cb-slideshow li:nth-child(6) div {
+            animation-delay: 30s;
+        }
+        .cb-slideshow li:nth-child(7) div {
+            animation-delay: 34s;
+        }
+        .cb-slideshow li:nth-child(8) div {
+            animation-delay: 38s;
+        }
+
+
+        @keyframes imageAnimation {
+            0% {
+                opacity: 0;
+                animation-timing-function: ease-in;
+            }
+            8% {
+                opacity: 1;
+                animation-timing-function: ease-out;
+            }
+            17% {
+                opacity: 1
+            }
+            25% {
+                opacity: 0
+            }
+            100% {
+                opacity: 0
+            }
+        }
+
+        @keyframes titleAnimation {
+            0% {
+                opacity: 0
+            }
+            8% {
+                opacity: 1
+            }
+            17% {
+                opacity: 1
+            }
+            19% {
+                opacity: 0
+            }
+            100% {
+                opacity: 0
+            }
+        }
+
+        .no-cssanimations .cb-slideshow li span {
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 1140px) {
+            .cb-slideshow li div h3 {
+                font-size: 140px
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .cb-slideshow li div h3 {
+                font-size: 80px
+            }
+        }
+
+        footer {
+            width: 1180px;
+            height: 100px;
+            background-color: transparent;
+            position: relative;
+            margin-top: 600px;
+            margin-left: 0;
+            bottom: 0;
+        }
+
+
+        .located {
+            text-align: center;
+            position: absolute;
+            left: 400px;
+            top: 145px;
+            font-family: Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: 20px;
+            color: black;
+        }
+
+        .hours {
+            text-align: center;
+            position: absolute;
+            left: 680px;
+            top: 145px;
+            font-family: Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: 20px;
+            color: black;
+        }
+
+        .phone {
+            text-align: center;
+            position: absolute;
+            left: 950px;
+            top: 152px;
+            font-family: Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: 20px;
+            color: black;
+        }
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+<div>
+<ul class="cb-slideshow">
+    <li>
+        <span>Image 01</span>
+        <div>
+            <h3>Welcome to</h3>
+        </div>
+    </li>
+    <li>
+        <span>Image 02</span>
+        <div>
+            <h3>Countryside Photo</h3>
+        </div>
+    </li>
+    <li>
+        <span>Image 03</span>
+        <div>
+            <h3>Countryside Photo</h3>
+        </div>
+    </li>
+    <li>
+        <span>Image 04</span>
+        <div>
+            <h3>Countryside Photo</h3>
+        </div>
+    </li>
+
+    <li>
+        <span>Image 05</span>
+        <div>
+            <h3>Countryside Photo</h3>
+        </div>
+    </li>
+
+    <li>
+        <span>Image 06</span>
+        <div>
+            <h3>Countryside Photo</h3>
+        </div>
+    </li>
+
+    <li>
+        <span>Image 07</span>
+        <div>
+            <h3>Countryside Photo</h3>
+        </div>
+    </li>
+
+    <li>
+        <span>Image 08</span>
+        <!--<div>-->
+            <!--<h3>Countryside Photo</h3>-->
+        <!--</div>-->
+    </li>
+    <li>
+        <span>Image 09</span>
+        <div>
+            <h3>Welcome to</h3>
+        </div>
+    </li>
+
+
+</ul>
+</div>
+
+<footer>
+    <!--<div> <img src="countryside_photo_logo_black.png" height="100px"/></div>-->
+    <nav class="nav2">
+        <a href="galleries.html"><p id="nav_section_012">Galleries</p></a>
+        <a href="aboutme.html"><p id="nav_section_032">About</p></a>
+        <a href="packages.html"><p id="nav_section_042">Packages</p></a>
+        <a href="contact.html"><p id="nav_section_052">Contact</p></a>
+        <a href="home.html"><p id="nav_section_022">Home</p></a>
+    </nav>
+
+    <!--<div class="located">Studio located at<br>-->
+        <!--2733 Neal Ave N., <br>-->
+        <!--Stillwater, MN 55082</div>-->
+    <!--<div class="hours">Hours to Call<br>-->
+        <!--8am-7pm: Tuesday <br>-->
+        <!--through Friday</div>-->
+    <!--<div class="phone">Studio Phone<br>-->
+        <!--651-494-4445</div>-->
+    <!--<br>-->
+    <!--<br>-->
+    <!--<br>-->
+    <!--<br>-->
+    <!--<br>-->
+    <!--<br>-->
+
+    <p>&copy; 2018 Countryside Photo<p>
+
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>

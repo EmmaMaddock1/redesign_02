@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /* nav Layout */
+        header {
+            width: 800px;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        nav {
+            width: 900px;
+            margin: 0px auto;
+            height: 50px;
+            margin-top: 20px;
+        }
+        footer {
+            width:100%;
+            height: 300px;
+            background-color: black;
+        }
+        .formtitle {
+            font-family: Helvetica;
+            font-style: normal;
+            color: #d2962e;
+            font-size: 30px;
+        }
+
+        .formsubtitle {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            color: black;
+            font-size: 20px;
+        }
+
+
+        #logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        #section_01 {
+            width: 100%;
+            height: 800px;
+            background-color: white;
+            color: darkgrey;
+            margin: 0 auto;
+            position: relative;
+
+        }
+
+        #section_05 {
+            width: 100%px;
+            height: 800px;
+            background-color: white;
+            color: darkgrey;
+            margin: 0 auto;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        #section_02, #section_04 {
+            width: 1180px;
+            height: 800px;
+            color: darkgrey;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        p#nav_section_01, p#nav_section_02, p#nav_section_03, p#nav_section_04, p#nav_section_05 {
+            display: inline;
+            font-size: 18px;
+            font-family: Helvetica, sans-serif;
+            background-color: white;
+            font-weight: lighter;
+            padding: 0 30px;
+            float: right;
+        }
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: goldenrod;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: pink;
+        }
+
+        p {
+            padding-top: 25px;
+            padding-left: 10px;
+            font-family: sans-serif;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+        .studio {
+            position: relative;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1180px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 350px;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        /* Style inputs with type="text", select elements and textareas */
+        input[type=text], select, textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        /* Style the submit button with a specific background color etc */
+        input[type=submit] {
+            background-color: #d2962e;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+        }
+
+        /* When moving the mouse over the submit button, add a darker green color */
+        input[type=submit]:hover {
+            background-color: #A07509;
+        }
+
+        /* Add a background color and some padding around the form */
+        .dm {
+            background-color: lavender;
+            padding: 20px;
+            font-size: 20px;
+            color: black;
+            font-family: Helvetica;
+            font-weight: normal;
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<nav>
+    <div id="logo">
+        <img src="countryside_photo_logo_black.png" height="100px"/>
+        <!--<a href="Countryside%20photo.html"</a>-->
+    </div>
+    <div id="top"></div>
+</nav>
+
+<nav>
+    <a href="galleries.html"><p id="nav_section_01">Senior Portraits</p></a>
+    <a href="aboutme.html"><p id="nav_section_03">Family Portraits</p></a>
+    <a href="About%20Me.html"><p id="nav_section_04">Packages</p></a>
+    <a href="#section_05"><p id="nav_section_05">Contact</p></a>
+    <a href="About%20Me.html"><p id="nav_section_02">Home</p></a>
+</nav>
+
+<div id="section_01">
+    <!-- Slideshow container -->
+    <div class="slideshow-container"/>
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <img src="1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="5.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="9.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="16.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="19.jpg" style="width:100%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<!--<div id="section_02">-->
+    <!--<div class="studio">-->
+        <!--&lt;!&ndash;<img src="22.jpg" alt="The Studio"/>&ndash;&gt;-->
+        <!--<div class="center">“Countryside Photo offers high quality <br>-->
+            <!--senior and family portraits capturing the real you.<br>-->
+            <!--I am a passionate, independent photographer who provides <br>-->
+            <!--a personal experience to get the best photos which you <br>-->
+            <!--and your family will cherish forever.”-->
+        <!--</div>-->
+        <!--<div class="bottomright"> -Brad Cornell, Lead Photographer</div>-->
+    <!--</div>-->
+
+    <div id="section_05">
+        <div class="formtitle"> Contact Me </div>
+        <div class="formsubtitle"> Leave me a message and I will get back to you to schedule a shoot!</div>
+        <!-- Direct Message Box-->
+        <div class="dm">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name">
+
+            <label for="Phone Number">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name">
+
+            <label for="phone number">Phone Number</label>
+            <input type="text" id="phone number" name="Phone Number" placeholder="Phone number">
+
+
+            <label for="service">Service</label>
+            <select id="service" name="country">
+                <option value="Family Portraits">Family Portraits</option>
+                <option value="Senior Portraits">Senior Portraits</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="Message">Message</label>
+            <textarea id="Message" name="Message" placeholder="Questions or details (optional)"
+                      style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+    <div> <img src="logowhite.png" height="100px"/></div>
+
+
+    <div class="located">Studio located at<br>
+        2733 Neal Ave N., <br>
+        Stillwater, MN 55082</div>
+    <div class="hours">Hours to Call<br>
+        8am-7pm: Tuesday <br>
+        through Friday</div>
+    <div class="phone">Studio Phone<br>
+        651-494-4445</div>
+    <nav class="nav2">
+        <a href="galleries.html"><p id="nav_section_012">Senior Portraits</p></a>
+        <a href="aboutme.html"><p id="nav_section_032">Family Portraits</p></a>
+        <a href="About%20Me.html"><p id="nav_section_042">Packages</p></a>
+        <a href="contact.html"><p id="nav_section_052">Contact</p></a>
+        <a href="About%20Me.html"><p id="nav_section_022">Home</p></a>
+    </nav>
+
+    <p>&copy; 2018 Countryside Photo<p>
+
+    </div>
+
+
+
+
+
+</footer>
+
+
+
+</body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+<script>
+    $(document).ready(function () {
+
+        $("a").on('click', function (event) {
+
+            if (this.hash !== "") {
+
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1000, function () {
+
+                    window.location.hash = hash;
+                });
+            } // End
+        });
+    });
+</script>
+</html>
